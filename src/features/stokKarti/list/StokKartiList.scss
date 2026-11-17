@@ -69,13 +69,18 @@
     border-collapse: collapse;
     background: var(--renk-yuzey);
 
+ .kod{
+  color: var(--renk-birincil);
+  font-weight: 600;
+ }
+
     th,
     td {
       padding: 10px 12px;
       text-align: left;
       border-bottom: 1px solid var(--renk-kenar);
     }
-
+     
     th {
       font-size: 12px;
       text-transform: uppercase;

@@ -60,8 +60,8 @@ export interface StokKarti {
   kod: string;
   kategori: Kategori;
   birim: Birim;
-  stokMiktari: number;
-  birimFiyat: number;
+  stokMiktari: number | "" ;
+  birimFiyat:number | "" ;
   durum: Durum;
   depoId: number;
   depoAdi: string;

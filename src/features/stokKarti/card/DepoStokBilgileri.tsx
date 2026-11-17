@@ -88,3 +88,4 @@ export function DepoStokBilgileri({ stokDegeri, onDepoSec }: DepoStokBilgileriPr
     </section>
   );
 }
+

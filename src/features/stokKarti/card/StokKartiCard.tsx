@@ -242,7 +242,7 @@ export function StokKartiCard({
               onClick={() => setSilOnayAcik(true)}
               disabled={isSubmitting}
             >
-              Sil
+              Sil 
             </button>
           )}
           {onVazgec && (
@@ -254,13 +254,12 @@ export function StokKartiCard({
             {isSubmitting ? "Kaydediliyor..." : "Kaydet"}
           </button>
         </footer>
-
         <DepoModal
           acik={depoModalAcik}
           seciliDepoId={values.depoId}
           onSec={depoSecildi}
           onKapat={() => setDepoModalAcik(false)}
-        />
+        /> 
 
         <ConfirmDialog
           acik={silOnayAcik}

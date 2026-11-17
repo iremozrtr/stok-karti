@@ -226,7 +226,7 @@ export function StokKartiList() {
                   className="stok-list__satir"
                   onClick={() => navigate(`/stok/${k.id}`)}
                 >
-                  <td data-etiket="Kod">{k.kod}</td>
+                  <td data-etiket="Kod" className="kod">{k.kod}</td>           
                   <td data-etiket="Ad">{k.ad}</td>
                   <td data-etiket="Kategori">{KATEGORI_LABEL[k.kategori]}</td>
                   <td data-etiket="Miktar" className="sayi">
