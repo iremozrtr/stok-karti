@@ -1,0 +1,60 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(20, 30, 55, 0.45);
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 480px;
+  max-height: calc(100vh - 32px);
+  background: var(--renk-yuzey);
+  border-radius: 12px;
+  box-shadow: var(--golge);
+
+  &--genis {
+    max-width: 760px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--renk-kenar);
+  }
+
+  &__title {
+    font-size: 16px;
+  }
+
+  &__close {
+    font-size: 24px;
+    line-height: 1;
+    color: var(--renk-soluk);
+    cursor: pointer;
+    background: none;
+    border: 0;
+  }
+
+  &__body {
+    flex: 1;
+    padding: 18px;
+    overflow-y: auto;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    padding: 12px 18px;
+    border-top: 1px solid var(--renk-kenar);
+  }
+}

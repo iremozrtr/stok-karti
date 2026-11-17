@@ -1,0 +1,15 @@
+{
+  "depolar": [
+    { "id": 1, "kod": "DP-001", "adi": "Merkez Depo", "sehir": "İstanbul" },
+    { "id": 2, "kod": "DP-002", "adi": "Hammadde Deposu", "sehir": "Kocaeli" },
+    { "id": 3, "kod": "DP-003", "adi": "Mamul Deposu", "sehir": "Bursa" },
+    { "id": 4, "kod": "DP-004", "adi": "Ankara Bölge Deposu", "sehir": "Ankara" },
+    { "id": 5, "kod": "DP-005", "adi": "İzmir Liman Deposu", "sehir": "İzmir" }
+  ],
+  "stoklar": [
+    { "id": 1, "ad": "Çelik Levha 2mm", "kod": "HM-1001", "kategori": "HAMMADDE", "birim": "KG", "stokMiktari": 1250, "birimFiyat": 42.5, "durum": "AKTIF", "depoId": 2, "depoAdi": "Hammadde Deposu" },
+    { "id": 2, "ad": "Motor Bloğu", "kod": "YM-2001", "kategori": "YARI_MAMUL", "birim": "ADET", "stokMiktari": 80, "birimFiyat": 1850, "durum": "AKTIF", "depoId": 1, "depoAdi": "Merkez Depo" },
+    { "id": 3, "ad": "Hidrolik Pompa", "kod": "MM-3001", "kategori": "MAMUL", "birim": "ADET", "stokMiktari": 36, "birimFiyat": 7400, "durum": "AKTIF", "depoId": 3, "depoAdi": "Mamul Deposu" },
+    { "id": 4, "ad": "Endüstriyel Yağ 20L", "kod": "TC-4001", "kategori": "TICARI", "birim": "LITRE", "stokMiktari": 0, "birimFiyat": 95, "durum": "PASIF", "depoId": 4, "depoAdi": "Ankara Bölge Deposu" }
+  ]
+}

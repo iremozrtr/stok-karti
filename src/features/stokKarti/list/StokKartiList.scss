@@ -1,0 +1,205 @@
+.stok-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  &__baslik {
+    font-size: 22px;
+  }
+
+  &__header-aksiyon {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  &__sekmeler {
+    display: flex;
+    gap: 4px;
+    border-bottom: 1px solid var(--renk-kenar);
+  }
+
+  &__sekme {
+    padding: 8px 16px;
+    font: inherit;
+    font-weight: 600;
+    color: var(--renk-soluk);
+    cursor: pointer;
+    background: none;
+    border: 0;
+    border-bottom: 2px solid transparent;
+
+    &--aktif {
+      color: var(--renk-birincil);
+      border-bottom-color: var(--renk-birincil);
+    }
+  }
+
+  &__filtre {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    .girdi {
+      flex: 0 1 200px;
+    }
+  }
+
+  &__arama {
+    flex: 1 1 260px !important;
+  }
+
+  &__tablo-kap {
+    overflow-x: auto;
+    background: var(--renk-yuzey);
+    border: 1px solid var(--renk-kenar);
+    border-radius: var(--yaricap);
+  }
+
+  &__tablo {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--renk-yuzey);
+
+    th,
+    td {
+      padding: 10px 12px;
+      text-align: left;
+      border-bottom: 1px solid var(--renk-kenar);
+    }
+
+    th {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--renk-soluk);
+      background: #f8f9fc;
+      white-space: nowrap;
+    }
+
+    tbody tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .sayi {
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .aksiyon__kap {
+      display: flex;
+      gap: 6px;
+      justify-content: flex-end;
+      white-space: nowrap;
+    }
+  }
+
+  &__satir {
+    cursor: pointer;
+
+    &:hover {
+      background: #f3f6fd;
+    }
+  }
+}
+
+.stok-rapor {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &__kutular {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  &__kutu {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1 1 220px;
+    padding: 16px;
+    background: var(--renk-yuzey);
+    border: 1px solid var(--renk-kenar);
+    border-radius: var(--yaricap);
+  }
+
+  &__etiket {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--renk-soluk);
+  }
+
+  &__deger {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 760px) {
+  .stok-list {
+    &__tablo-kap {
+      overflow: visible;
+      background: none;
+      border: 0;
+    }
+
+    &__tablo {
+      background: none;
+
+      thead {
+        display: none;
+      }
+
+      tbody,
+      tr,
+      td {
+        display: block;
+      }
+
+      tr {
+        margin-bottom: 12px;
+        padding: 8px 0;
+        background: var(--renk-yuzey);
+        border: 1px solid var(--renk-kenar);
+        border-radius: var(--yaricap);
+      }
+
+      td {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 6px 12px;
+        text-align: right;
+        border-bottom: 0;
+
+        &::before {
+          content: attr(data-etiket);
+          font-weight: 600;
+          color: var(--renk-soluk);
+          text-align: left;
+        }
+
+        &.aksiyon::before {
+          content: none;
+        }
+
+        &.aksiyon .aksiyon__kap {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .uygulama__icerik {
+    padding: 16px;
+  }
+}

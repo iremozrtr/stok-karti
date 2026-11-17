@@ -1,0 +1,56 @@
+.notification-stack {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: min(380px, calc(100vw - 32px));
+}
+
+.notification {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  color: var(--renk-metin);
+  background: var(--renk-yuzey);
+  border: 1px solid var(--renk-kenar);
+  border-left-width: 4px;
+  border-radius: var(--yaricap);
+  box-shadow: var(--golge);
+
+  &--success {
+    border-left-color: var(--renk-basari);
+  }
+
+  &--error {
+    border-left-color: var(--renk-tehlike);
+  }
+
+  &--info {
+    border-left-color: var(--renk-birincil);
+  }
+
+  &__message {
+    flex: 1;
+    font-weight: 500;
+  }
+
+  &__link {
+    font-weight: 600;
+    color: var(--renk-birincil);
+    white-space: nowrap;
+  }
+
+  &__close {
+    padding: 0 4px;
+    font-size: 20px;
+    line-height: 1;
+    color: var(--renk-soluk);
+    cursor: pointer;
+    background: none;
+    border: 0;
+  }
+}
